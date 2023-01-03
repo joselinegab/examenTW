@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 
 export class QuienesSomosService {
-  private rutas:Ruta[]=[
+  public rutas:Ruta[]=[
     {
       ciudadOrigen: "Machala",
       ciudadDestino: "Buenos Aires",

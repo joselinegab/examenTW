@@ -9,6 +9,10 @@ import { RutasComponent } from './componentes/rutas/rutas.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { NavbarComponent } from './componentes/shared/navbar/navbar.component';
 
+//Services
+import { QuienesSomosService } from './services/quienes-somos.service';
+import { RutaComponent } from './componentes/ruta/ruta.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +20,16 @@ import { NavbarComponent } from './componentes/shared/navbar/navbar.component';
     BuscarRutasComponent,
     RutasComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    RutaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    QuienesSomosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
