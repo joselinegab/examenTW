@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 })
 export class RutasComponent {
 rutas:transporte[]=[];
+filtro: string[] = ['todos', 'interno', 'externo'];
+
+
 constructor(private _trasporte:TransporteService, private router:Router)
 {
 
@@ -23,6 +26,8 @@ this.router.navigate(['/detalle-rutas',idx])
 this.rutas= this._trasporte.getTrasporte();
   console.log(this.rutas);
 }
+filtrar() {
+  this.filtro = this.filtro.filter((value, index, array) => {});
 
 
 

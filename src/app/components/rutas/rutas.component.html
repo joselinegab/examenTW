@@ -1,12 +1,21 @@
 <h1 style="margin-top: 25px;">Ciudades<small> y Destinos</small></h1>
-<hr>
+<br>
+<div class="container">
+  <p>Filtro:</p>
+
+
+</div><hr>
+<br>
 <div class="row row-cols-1 row-cols-md-3 g-4">
 
-    <div class=" cool animated fadeIn fast " *ngFor="let ruta of rutas; let i=index ">
+    <div class=" cool animated fadeIn fast " *ngFor="let ruta of rutas; let i=index;">
 
         <div class="card-body " style="background-color: aliceblue;">
             <p class="card-text ">{{ruta.ciudadOrigen}}</p>
             <p class="card-text ">{{ruta.cuidadDestino}}</p>
+            <br>
+
+<br>
             <button (click)="verRutas(i)" type="button " class="btn btn-primary "> Ver más..</button>
         </div>
         <div class="card-footer ">
@@ -17,3 +26,7 @@
         </div>
     </div>
 </div>
+
+
+
+

@@ -88,6 +88,11 @@ export class TransporteService {
   getTrasporteBuscar(idx:number){
     return this.ruta[idx];
     }
+
+  getTrasporteFiltrado(tipo: string) {
+      return this.ruta.filter(ruta => ruta.tipos === tipo);
+    }
+
   constructor() {
     console.log("Servicio listo para usar..");
    }
