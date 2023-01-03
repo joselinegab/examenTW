@@ -3,31 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BuscarRutasComponent } from './componentes/buscar-rutas/buscar-rutas.component';
-import { RutasComponent } from './componentes/rutas/rutas.component';
-import { HomeComponent } from './componentes/home/home.component';
-import { NavbarComponent } from './componentes/shared/navbar/navbar.component';
-
-//Services
-import { RutaComponent } from './componentes/ruta/ruta.component';
-import { RutasService } from './services/rutas.service';
+import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
+import { RutasComponent } from './components/rutas/rutas.component';
+import { BuscarRutasComponent } from './components/buscar-rutas/buscar-rutas.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { DetalleRutasComponent } from './components/detalle-rutas/detalle-rutas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BuscarRutasComponent,
+    QuienesSomosComponent,
     RutasComponent,
-    HomeComponent,
+    BuscarRutasComponent,
     NavbarComponent,
-    RutaComponent
+    HomeComponent,
+    DetalleRutasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [
-    RutasService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
