@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-import { QuienesSomosService } from 'src/app/services/quienes-somos.service';
+import { RutasService } from 'src/app/services/rutas.service';
 
 @Component({
   selector: 'app-ruta',
@@ -16,12 +16,12 @@ export class RutaComponent implements OnInit {
 
   //Recibir parámetos por rutas
   constructor(private activateRoute:ActivatedRoute,
-    private _quienesServicio:QuienesSomosService,  private location: Location,
+    private _rutasServicio:RutasService,  private location: Location,
     private router:Router
     ) {
       
     this.activateRoute.params.subscribe(params=>{
-      this.ruta=_quienesServicio.getRuta(params['id']);
+      this.ruta=_rutasServicio.getRuta(params['id']);
       console.log(this.ruta);
     })
    }
@@ -31,7 +31,7 @@ export class RutaComponent implements OnInit {
 
   verRuta(){
     console.log(this.index);
-    this.router.navigate(['/heroe', this.index])
+    this.router.navigate(['/ruta', this.index])
   }
 
   ngOnInit(): void {

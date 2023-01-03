@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RutaComponent } from '../ruta/ruta.component';
+import { Ruta, RutasService } from 'src/app/services/rutas.service';
 
 @Component({
   selector: 'app-rutas',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RutasComponent implements OnInit {
 
-  constructor() { }
+  rutas:Ruta[]=[];
 
+  constructor(private _rutasServicio:RutasService, private router:Router) 
+  {
+    
+   }
+
+  verRuta(idx:number){
+console.log(idx);
+this.router.navigate(['/ruta',idx])
+
+
+  }
   ngOnInit(): void {
+    this.rutas= this._rutasServicio.getRutas();
+    console.log(this.rutas);
   }
 
 }

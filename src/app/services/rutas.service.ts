@@ -5,48 +5,48 @@ import { Observable } from 'rxjs/internal/Observable';
 @Injectable({
   providedIn: 'root'
 })
+export class RutasService {
 
-export class QuienesSomosService {
   public rutas:Ruta[]=[
     {
       ciudadOrigen: "Machala",
-      ciudadDestino: "Buenos Aires",
-      precio: 350.52,
+      ciudadDestino: "El Guabo",
+      precio: 5.52,
       descrip: "Descripcion1",
       tipo: "Interno"
     },
     {
       ciudadOrigen: "Quito",
       ciudadDestino: "Cuenca",
-      precio: 312.52,
+      precio: 12.52,
       descrip: "Descripcion2",
       tipo: "Interno"
     },
     {
       ciudadOrigen: "Cuenca",
       ciudadDestino: "Manta",
-      precio: 150.52,
+      precio: 14.52,
       descrip: "Descripcion3",
       tipo: "Externo"
     },
     {
       ciudadOrigen: "Ambato",
       ciudadDestino: "Guayaquil",
-      precio: 210.52,
+      precio: 16.52,
       descrip: "Descripcion4",
       tipo: "Interno"
     },
     {
       ciudadOrigen: "Loja",
       ciudadDestino: "Portoviejo",
-      precio: 250.80,
+      precio: 12.80,
       descrip: "Descripcion5",
       tipo: "Externo"
     },
     {
       ciudadOrigen: "Machala",
       ciudadDestino: "Ibarra",
-      precio: 512.52,
+      precio: 14.52,
       descrip: "Descripcion6",
       tipo: "Externo"
     },
@@ -60,21 +60,21 @@ export class QuienesSomosService {
     {
       ciudadOrigen: "Quevedo",
       ciudadDestino: "Cuenca",
-      precio: 260.92,
+      precio: 8.92,
       descrip: "Descripcion8",
       tipo: "Interno"
     },
     {
       ciudadOrigen: "Babahoyo",
       ciudadDestino: "Tulcán",
-      precio: 360.12,
+      precio: 20.12,
       descrip: "Descripcion9",
       tipo: "Interno"
     },
     {
       ciudadOrigen: "Esmeraldas",
       ciudadDestino: "Milagro",
-      precio: 420.60,
+      precio: 30.60,
       descrip: "Descripcion10",
       tipo: "Externo"
     }
@@ -100,3 +100,4 @@ export interface Ruta{
   descrip: string;
   tipo: string;
 }
+
